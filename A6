@@ -1,0 +1,24 @@
+import numpy as np
+import mathpy as m
+import random
+from math
+
+def generate_vector():
+    x = [0]*128
+    return x
+
+def generate_possition(x):
+    i_possition = [0]*5
+    for i in range(5):
+        i_possition = random.randint(0, 127)
+    return i_possition
+
+def generate_value(x, i_position):
+    for i in range(len(x)):
+        for j in range(len(i_position)):
+            x[i_position[j]] = random.uniform(0, 1)
+    return x
+
+def generate_noise(x):
+    for i in range(len(x)):
+        x[i] = x[i] + 0.05*np.random.randn(1, 128)
